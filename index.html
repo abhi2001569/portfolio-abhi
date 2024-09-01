@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/tablogo.png">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+  
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgb(118, 115, 115);
+    padding: 2%;
+    backdrop-filter: blur(10px);
+
+ 
+}
+
+.leftlogo img{
+    height: 50px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+}
+
+
+.nav-right a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    font-family: "Chivo Mono", monospace;
+}
+
+.page1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 13px 10px;
+    background-image: url(img/back2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.page1-left{
+    height: 640px;
+    width: 50%;
+    align-items: center;
+}
+
+.page1-left img{
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin: 80px 190px;
+    filter: drop-shadow(0 0 10px black);
+}
+.page1-right{
+    height: 640px;
+    width: 50%;
+}
+
+
+.page1-right-iiner{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    display: block;
+    margin: 50px 0;
+    padding: 2%;
+    border-radius: 20px;
+    
+}
+
+.page1-right-iiner h1 {
+    font-family: "Long Cang", cursive;
+  font-weight: bold;
+  font-style: normal;
+  color: rgb(255, 111, 0);
+  margin: 25px 0;
+
+}
+
+.page1-right-iiner p{
+    color: rgb(78, 77, 77);
+    font-weight: 500;
+}
+
+
+
+
+.page1-right-iiner button {
+    position: relative;
+    width: 20%;
+    text-align: center;
+    background-color: rgb(255, 111, 0);
+    border-radius: 30px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.page1-right-iiner button::before,
+.page1-right-iiner button::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.5s;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.page1-right-iiner button::before {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.page1-right-iiner button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.page1-right-iiner button:hover {
+    background-color: rgb(13, 0, 255);
+    transform: scale(1.05);
+}
+
+.page1-right-iiner button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+Ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.links a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    filter: drop-shadow( 0 0 9px rgb(2, 238, 255));
+
+}
+/* Projects styles */
+.projects {
+    width: auto;
+    padding: 3rem;
+    background-image: url(img/back3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.project-card {
+    flex: 1 1 calc(30% - 20px);
+    max-width: 300px;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: rgb(252, 249, 249);
+}
+
+.project-card img {
+    height: 100px;
+    width: auto;
+}
+
+.project-card button {
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background: none;
+}
+
+.project-card button a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: rgb(212, 230, 230);
+}
+
+
+.education{
+    height: 100%;
+    width: auto;
+    background-color: aliceblue;
+    margin: 1rem;
+
+  
+    
+}
+
+.education-card{
+    display: flex;
+    justify-content: space-between;
+  
+   
+}
+
+.education-left{
+    height: 100vh;
+    width: 50%;
+    /* background-color:aqua ; */
+    padding: 320px 150px;
+    background-image: url('img/graduate.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: darken;
+
+
+}
+.education-right {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+    align-items: center; /* Center the table vertically */
+}
+
+table {
+    border-collapse: separate;
+    width: 80%; 
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Light border for table cells */
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+th {
+    color: rgb(38, 0, 255); /* Header text color */
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for table rows */
+}
+
+tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+}
+/* Contact Page Styles */
+.contact {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: rgb(38, 0, 255);
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.contact-info {
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: rgb(38, 0, 255);
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(38, 0, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(25, 0, 170);
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .main{
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(234, 224, 224);
+    padding: 20px 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.social-media ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.contact-info p,
+.copyright p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.contact-info p {
+    font-weight: bold;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+.social-media ul li a:hover {
+    color: #000000;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media ul {
+        justify-content: center;
+    }
+}
+
+    </style>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Yuji+Boku&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="leftlogo">
+                <img src="img/portfolio.png" alt="">
+            </div>         
+                  
+            <div class="nav-right">
+             <a href="" style="color: rgb(0, 30, 255); font-size: 20px;">Home / About Me</a></li>
+             <a href="#projects">Project</a></li>
+             <a href="#educations">Education</a></li>
+             <a href="#contact">Contact</a></li>     
+            </div>         
+        </nav>
+
+        <div class="page1">
+            <div class="page1-left">
+                <img src="img/bhosleabhishek.jpg" alt="">
+
+            </div>
+            <div class="page1-right">
+                <div class="page1-right-iiner">
+                    <h1> <span style="color: rgb(0, 21, 255); font-size: 70px;">H</span>ello.. I'm</h1>
+                    <h3 style="font-style: italic;">Bhosle Abhishek.</h3>
+                    <p>Passionate Web Developer with a Master’s in Computer Applications, experienced in HTML, CSS, MySQL, Java and Advance Java. Skilled in creating dynamic web applications, eager to contribute to innovative projects.</p><br>
+                    <p style=" font-size: 15px; font-style: italic; text-decoration: underline;">I am from Udgir, Maharashtra</p style=" font-size: 20px">
+                    <button>Contact Me</button>
+                    <ul class="links">
+                        <li><a href="https://www.instagram.com/mr.abhi_bhosle/"><i class="ri-instagram-fill"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/abhishek-bhosle-64927b218/"><i class="ri-linkedin-box-fill"></i></a></li>
+                        <li><a href="https://github.com/abhi2001569"><i class="ri-github-fill"></i></a></li>
+                        <li><a href="https://x.com/abhi24288277"><i class="ri-twitter-fill"></i></a></li>
+                    </ul>
+               </div>
+               
+            </div>
+        </div>
+
+        <!-- projects -->
+       <div class="projects" id="projects">
+        <!-- <h1 style="margin-left: 50px; margin-bottom: 20px; text-align: center;">projects</h1> -->
+        <div class="project-card">
+            <img src="img/food.png" alt="">
+            <h3>Indian Food Project</h3>
+            <p>flavorful spices, aromatic herbs, vibrant colors, rich textures,
+                hearty dishes, tropical fruits, exotic flavors.</p>
+            <button><a href="https://abhi2001569.github.io/indoiantadakafood/" >Live View</a></button>
+
+        </div>
+     
+            <div class="project-card">
+                <img src="img/laptop.png" alt="">
+                <h3>Laptop Hosue Project</h3>
+                <p>Laptop House offers a range of laptops, repairs, and accessories. Expert service, quality brands, and competitive prices ensure satisfaction.</p>
+                <button><a href="https://abhi2001569.github.io/Laptop-House/" target="_blank">Live View</a></button>
+    
+    
+            </div>
+      
+   
+            <div class="project-card">
+                <img src="img/education.png" alt="">
+                <h3>KnowledgeNook Project</h3>
+                <p>KnowledgeNook offers interactive educational tools and resources, enhancing student learning with personalized, engaging content.</p>
+                <button><a href="https://abhi2001569.github.io/educationsystem/" target="_blank">Live View</a></button>
+    
+    
+            </div>      
+        </div>
+        
+        <!-- Education -->
+
+        <div class="education" id="educations">
+            <div class="education-card">
+                <div class="education-left">
+
+                </div>
+                <div class="education-right">
+                    <table >
+                        <tr>
+                            <th>Cource Name</th>
+                            <th>university Name</th>
+                            <th>College Name</th>
+                            <th>Passout year</th>
+                        </tr>
+                        <tr>
+                            <td>10Th</td>
+                            <td>Maharashtra Board</td>
+                            <td>Vidhya vardini Highschool, Udgir</td>
+                            <td>2017</td>
+                        </tr>
+                        <tr>
+                            <td>12Th</td>
+                            <td>Maharashtra Board</td>
+                            <td>Shivaji Mahavidhyalay, Udgir</td>
+                            <td>2019</td>
+                        </tr>
+                        <tr>
+                            <td>BCS</td>
+                            <td>Swami Ramanand Teerth Marathwada university, Nanded</td>
+                            <td>COCSIT, Latur</td>
+                            <td>2022</td>
+                        </tr>
+                        <tr>
+                            <td>MCA</td>
+                            <td>Shivaji university Kolhapur</td>
+                            <td> V.P. Institute of Management Studies & Research, Sangli</td>
+                            <td>2024</td>
+                        </tr>
+                    </table>
+
+                </div>
+              
+
+            </div>
+
+        </div>
+
+        <!-- Contact Page -->
+<div class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p>If you have any questions or would like to collaborate, feel free to reach out to me using the form below.</p>
+            <ul class="contact-details">
+                <li><i class="ri-mail-fill"></i> abhishek@gmail.com</li>
+                <li><i class="ri-phone-fill"></i> +91 12345 67890</li>
+                <li><i class="ri-map-pin-fill"></i> Udgir, Maharashtra, India</li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your name " required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Ypur Gmail" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="social-media">
+            <ul>
+                <li><a href="https://www.instagram.com/mr.abhi_bhosle/"><i class="ri-instagram-fill"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/abhishek-bhosle-64927b218/"><i class="ri-linkedin-box-fill"></i></a></li>
+                <li><a href="https://github.com/abhi2001569"><i class="ri-github-fill"></i></a></li>
+                <li><a href="https://x.com/abhi24288277"><i class="ri-twitter-fill"></i></a></li>
+            </ul>
+        </div>
+        <div class="contact-info">
+            <p>Bhosle Abhishek Wamanrao | +91 7775047781 | abhishek@gmail.com</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Bhosle Abhishek Wamanrao. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+       
+    </div>
+    
+</body>
+</html>
